@@ -1,0 +1,46 @@
+@use "../base/variables";
+@use "../base/mixins";
+
+.header{
+    min-height: 60rem;
+    background-image: url(../../img/hero.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    padding: 5rem;
+    @media(min-width:768px){
+        padding: 4rem;
+    }
+    &__contenido{
+        display: flex;
+        flex-direction: column;
+        height: 56rem;
+        justify-content: space-between;
+        color: variables.$blanco;
+    }
+}
+.barra{
+    @include mixins.desktopLarge{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    &__nombre{
+        font-weight: 300;
+        text-align: center;
+        font-size: 3rem;
+        color: variables.$blanco;
+        span{
+            font-weight: 700;
+            font-size: 5rem;
+            font-family: variables.$fuenteSecundaria;
+            @include mixins.tablet{
+                font-size: 6rem;
+            }
+        }
+        @include mixins.tablet{
+            font-size: 3.5rem;
+        }
+
+    }
+}

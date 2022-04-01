@@ -1,0 +1,26 @@
+{
+  "name": "countrysiderealestate",
+  "version": "1.0.0",
+  "description": "\"Proyecto pagina web real estate utilizando HTML, CSS, SASS, GULP y JAVASCRIPT\"",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "sass": "sass src/scss:build/css"
+  },
+  "keywords": [
+    "CSS",
+    "GULP",
+    "SASS",
+    "JS",
+    "HTML5"
+  ],
+  "author": "Jorge Meza Bello",
+  "license": "ISC",
+  "devDependencies": {
+    "gulp-sass": "^5.1.0",
+    "sass": "^1.49.10"
+  },
+  "dependencies": {
+    "gulp": "^4.0.2"
+  }
+}
