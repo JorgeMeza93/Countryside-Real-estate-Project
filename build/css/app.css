@@ -31,6 +31,8 @@
   text-align: center;
   font-size: 3rem;
   color: #ffffff;
+  margin-top: 0;
+  padding-top: 0;
 }
 .barra__nombre span {
   font-weight: 700;
@@ -46,6 +48,88 @@
   .barra__nombre {
     font-size: 3.5rem;
   }
+}
+.barra__contacto {
+  display: flex;
+  flex-direction: column;
+}
+@media (min-width: 1100px) {
+  .barra__contacto {
+    min-width: 42rem;
+  }
+}
+.barra__telefono {
+  margin-bottom: 2rem;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+}
+@media (min-width: 1100px) {
+  .barra__telefono {
+    margin-top: 3rem;
+  }
+}
+.barra__telefono a {
+  color: #ffffff;
+  text-decoration: none;
+  font-size: 2.7rem;
+  display: flex;
+}
+.barra__telefono a::before {
+  content: "";
+  width: 4rem;
+  height: 4rem;
+  display: block;
+  background-image: url(../../img/telefono.png);
+  background-repeat: no-repeat;
+}
+
+.navegacion {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+@media (min-width: 1100px) {
+  .navegacion {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+}
+.navegacion a {
+  color: #ffffff;
+  text-decoration: none;
+  font-size: 1.9rem;
+  margin-bottom: 2rem;
+  padding: 0.5rem 1rem;
+  border-radius: 6px;
+  width: 80%;
+  text-align: center;
+}
+.navegacion a:hover {
+  background-color: rgba(255, 255, 255, 0.3);
+  color: #000;
+}
+
+.slogan {
+  text-align: center;
+}
+@media (min-width: 1100px) {
+  .slogan {
+    text-align: right;
+  }
+}
+.slogan h1 {
+  font-size: 3rem;
+  margin: 0;
+}
+@media (min-width: 768px) {
+  .slogan h1 {
+    font-size: 4.8rem;
+  }
+}
+.slogan p {
+  margin: 0;
+  line-height: 1;
 }
 
 /*! normalize.css v8.0.1 | MIT License | github.com/necolas/normalize.css */
@@ -440,4 +524,30 @@ img {
 .boton:hover {
   background-color: #343A40;
   color: #ffffff;
+}
+
+.nosotros {
+  margin-top: 5rem;
+  display: grid;
+  grid-template-rows: repeat(2, 1fr);
+  background-image: url(../../img/nosotros.jpg);
+  background-repeat: no-repeat;
+  background-position: bottom center;
+}
+@media (min-width: 1024px) {
+  .nosotros {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+.nosotros__contenido {
+  background-color: #ffffff;
+  padding: 5rem;
+}
+@media (min-width: 1024px) {
+  .nosotros__contenido {
+    grid-column: 2/4;
+  }
+}
+.nosotros__heading {
+  margin-bottom: 1rem;
 }
