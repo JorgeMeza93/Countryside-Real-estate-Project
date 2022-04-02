@@ -1,0 +1,55 @@
+@use "../base/mixins";
+@use "../base/variables";
+
+.modelos{
+    margin-top: 5rem;
+    h2{
+        text-align: center;
+    }  
+}
+.modelo{
+    display: grid;
+    grid-template-rows: repeat(2, 1fr);   
+    margin-bottom: 5rem;
+    background-repeat: no-repeat;
+    background-position: bottom center;
+    &:last-of-type{
+        margin-bottom: 0;
+    }    
+    @include mixins.desktop{
+        grid-template-columns: repeat(2, 1fr);
+    }
+    &__contenido{
+        padding: 5rem;
+        background-color: variables.$blanco;
+
+    }
+    &__basico{
+        background-image: url(../../img/modelo_basico.jpg);
+        .modelo__contenido{
+            background-color: variables.$negro;
+            color: variables.$blanco;
+        }
+       
+    }
+    &__premier{
+        background-image: url(../../img/modelo_premier.jpg);
+        .modelo__contenido{
+            @include mixins.desktop{
+                grid-row: 2/3;
+                grid-column: 2/3;
+            }
+       }
+    }
+    &__elite{
+        background-image: url(../../img/modelo_elite.jpg);
+        .modelo__contenido{
+            background-color: variables.$negro;
+            color: variables.$blanco;
+            @include mixins.desktop{
+                grid-row: 2/3;
+                
+            }
+        }
+    }   
+}

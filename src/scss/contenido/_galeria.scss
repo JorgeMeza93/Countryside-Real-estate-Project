@@ -1,0 +1,20 @@
+@use "../base/mixins";
+@use "../base/variables";
+
+.galeria{
+    margin-top: 5rem;
+    &__heading{
+        text-align: center;
+    }
+    &__grid{
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 2rem;
+        @include mixins.tablet{
+            grid-template-columns: repeat(3, 1fr);
+        }
+    }
+    &__imagen{
+        object-fit: cover;
+    }
+}
